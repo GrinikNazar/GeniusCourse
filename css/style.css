@@ -30,6 +30,8 @@ p {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -71,17 +73,28 @@ address {
     padding: 48px 0;
 }
 
-.visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+/* Header */
+.header-container {
+    display: flex;
+    align-items: center;
+    /* background-color: #31261A; */
+    gap: 40px
 }
 
-/* Main menu */
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
 .link {
     color: var(--color-primary-light);
     font-size: 18px;
@@ -90,11 +103,10 @@ address {
 
 .link:hover {
     color: var(--color-brand);
-    font-weight: 600;
     text-decoration: none;
 }
 
-/* Main title */
+/* Hero title */
 .hero-title {
     color: var(--color-primary-light);
     text-align: center;
@@ -110,7 +122,45 @@ address {
     padding: 270px;
 }
 
+/* Advantages section */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.advantages-section {
+    background-color: var(--color-brand);
+    padding: 16px 0;
+}
+
+.advantages-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px
+}
+
+.advantages-item {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--color-primary-light);
+}
+
 /* Traditions section */
+.traditions-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px
+}
+
+.traditions-content {
+    max-width: 710px;
+}
+
 .traditions-section {
     padding-top: 96px;
 }
@@ -119,24 +169,17 @@ address {
     margin-bottom: 42px;
 }
 
-.advantages-list {
-    background-color: var(--color-brand);
-    color: var(--color-primary-light);
-}
-
-.advantages-item {
-    font-size: 20px;
-    font-weight: 300;
-}
-
 .traditions-text .brand {
     color: var(--color-brand);
     font-weight: 600;
-
 }
 
 .traditions-text .upper {
     text-transform: uppercase;
+}
+
+.traditions-text.limited {
+    max-width: 340px;
 }
 
 /* Chef section */
@@ -155,6 +198,22 @@ address {
 }
 
 /* Formats section */
+.formats-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.format-cards {
+    padding: 25px;
+}
+
+.format-item {
+    flex-basis: calc((100% - 40px) / 3);
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
 .formats-title {
     margin-bottom: 80px;
 }
